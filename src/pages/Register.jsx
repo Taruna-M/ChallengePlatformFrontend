@@ -12,7 +12,7 @@ const Register = () => {
     try {
       await axios.post("/auth/register/", data);
       alert("Registration successful! You can now log in.");
-      navigate("/login");
+      navigate("/auth/login");
     } catch (error) {
       if (!error.response) {
         setGlobalError("Server is not responding. Please try again later.");
